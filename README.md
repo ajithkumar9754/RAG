@@ -3,7 +3,11 @@
 Import the code base
 
 Configure the below props in application.properties
+
+
 Set the OPENAPI key 
+
+
 Set PDF file to be read 
 
 run the app 
