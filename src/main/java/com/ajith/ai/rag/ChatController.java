@@ -34,7 +34,7 @@ public class ChatController {
 	}
 
 	@PostMapping
-    public Answer ask(@RequestBody Question question) {
+    public Answer chat(@RequestBody Question question) {
         List<Document> similarDocuments = vectorStore.similaritySearch(SearchRequest.query(question.question()).withTopK(2));
         List<String> contentList = similarDocuments.stream().map(Document::getContent).toList();
         PromptTemplate promptTemplate = new PromptTemplate(ragPromptTemplate);
